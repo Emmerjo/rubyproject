@@ -2,13 +2,28 @@
 
 <h1>Boardgames</h1>
 
-<div id="boardgames">
-  <% @boardgames.each do |boardgame| %>
-    <%= render boardgame %>
-    <p>
-      <%= link_to "Show this boardgame", boardgame %>
-    </p>
-  <% end %>
-</div>
+
+<table class=table>
+    <thead>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Author</th>
+      <th>Rating</th>
+      <th> </th>
+    </thead>
+    <tbody>
+      <% @boardgames.each do |boardgame| %>
+        <tr>
+          <td><%= boardgame.title %></td>
+          <td><%= boardgame.price %></td>
+          <td><%= boardgame.author%></td>
+          <td><%= boardgame.rating%></td>
+          <td>
+            <%= link_to "Show this boardgame", boardgame %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>
 
 <%= link_to "New boardgame", new_boardgame_path %>
