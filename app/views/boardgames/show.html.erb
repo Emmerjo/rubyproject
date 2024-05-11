@@ -4,8 +4,8 @@
   <%= render @boardgame %>
 
   <div>
-    <%= link_to "Edit this boardgame", edit_boardgame_path(@boardgame), class:"btn btn-secondary" %>
-    <%= link_to "Back to boardgames", boardgames_path, class:"btn btn-secondary" %>
+    <%= link_to "Edit this boardgame", edit_boardgame_path(@boardgame), class:"btn btn-secondary mr-2" %>
+    <%= link_to "Back to boardgames", boardgames_path, class:"btn btn-secondary m-2" %>
 
     <br>
     <%= button_to "Destroy this boardgame", @boardgame, method: :delete, class:"btn btn-danger" %>
