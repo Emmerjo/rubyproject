@@ -1,10 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<div class="container-fluid">
+  <p style="color: green"><%= notice %></p>
 
-<%= render @boardgame %>
+  <%= render @boardgame %>
 
-<div>
-  <%= link_to "Edit this boardgame", edit_boardgame_path(@boardgame) %> |
-  <%= link_to "Back to boardgames", boardgames_path %>
+  <div>
+    <%= link_to "Edit this boardgame", edit_boardgame_path(@boardgame), class:"btn btn-secondary" %>
+    <%= link_to "Back to boardgames", boardgames_path, class:"btn btn-secondary" %>
 
-  <%= button_to "Destroy this boardgame", @boardgame, method: :delete %>
+    <br>
+    <%= button_to "Destroy this boardgame", @boardgame, method: :delete, class:"btn btn-danger" %>
+  </div>
 </div>
