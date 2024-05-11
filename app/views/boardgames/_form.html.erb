@@ -32,6 +32,10 @@
   </div>
 
   <div>
+    <%= form.number_field :user_id, id: :boardgame_user_id, value: current_user.id, type: :hidden%>
+  </div>
+
+  <div>
     <%= form.submit class:"btn btn-secondary mt-2"%>
   </div>
 <% end %>
