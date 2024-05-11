@@ -12,6 +12,18 @@
         <li class="nav-item">
           <%= link_to "Voeg boardgame toe", new_boardgame_path, class:"nav-link" %> 
         </li>
+        <li class="nav-item">
+          <%= link_to "Aanmelden", new_user_registration_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Inloggen", new_user_session_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Profiel", edit_user_registration_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+        </li>
       </ul>
     </div>
   </div>
