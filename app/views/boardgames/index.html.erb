@@ -9,19 +9,23 @@
       <th>Price</th>
       <th>Author</th>
       <th>Rating</th>
+      <th>User Id</th>
       <th> </th>
     </thead>
     <tbody>
       <% @boardgames.each do |boardgame| %>
+        <% if boardgame.user == current_user%>
         <tr>
           <td><%= boardgame.title %></td>
           <td><%= boardgame.price %></td>
           <td><%= boardgame.author%></td>
           <td><%= boardgame.rating%></td>
+          <td><%= boardgame.user_id%></td>
           <td>
             <%= link_to "Show this boardgame", boardgame, class:"btn btn-secondary" %>
           </td>
         </tr>
+        <% end %>
       <% end %>
     </tbody>
 </table>
